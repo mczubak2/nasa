@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-    <h1 class="about__header">Space Explorer 🌌</h1>
+    <h1 class="about__header">NASA 🌌</h1>
     <div class="about__description">
       <h4>What Does NASA Do?</h4>
       <p>Many people know something about NASA’s work. But most probably have no
@@ -51,7 +51,7 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 100px;
+    padding: 100px 20px 0 20px;
     &__header {
       text-align: center;
       font-weight: 500;

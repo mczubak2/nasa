@@ -1,7 +1,7 @@
 <template>
   <div class="app">
     <div class="app__nav">
-      <div class="app__logo">Spacer 🚀</div>
+      <a class="app__logo" href="/"><div class="app__logoItem">Spacer 🚀</div></a>
       <div class="app__links">
         <router-link class="app__link" to="/">
           <span class="app__span">space explorer</span>
@@ -47,11 +47,21 @@
     }
 
     &__logo {
-      font-size: 1.4rem;
       margin-left: 40px;
+      text-decoration: none;
+    }
+
+    &__logoItem {
+      font-size: 1.4rem;
       text-transform: uppercase;
       font-weight: 500;
       color: white;
+      transition: .3s;
+
+      &:hover {
+        cursor: pointer;
+        opacity: .7;
+      }
     }
 
     &__links {
