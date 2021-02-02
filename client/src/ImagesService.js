@@ -15,6 +15,32 @@ class ImagesService {
       }
     });
   }
+
+  static clearCache() {
+    return new Promise(async (resolve, reject) => {
+      try {
+          await axios.use(`${url}delete/all`);
+        resolve(
+          console.log('Cache is deleted')
+        );
+      } catch (error) {
+        reject(error);
+      }
+    });
+  }
+
+  static removeSpecific(name) {
+    return new Promise(async (resolve, reject) => {
+      try {
+          await axios.use(`${url}delete/${name}`);
+        resolve(
+          console.log('Key is deleted')
+        );
+      } catch (error) {
+        reject(error);
+      }
+    });
+  }
 }
 
 export default ImagesService;
